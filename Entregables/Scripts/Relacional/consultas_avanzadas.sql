@@ -155,7 +155,7 @@ LIMIT
 -- Usuarios con mas reseñas negativas
 SELECT
     u.nombre,
-    COUNT(r.id) AS reseñas_negativas
+    COUNT(r.id) AS resegnas_negativas
 FROM
     reviews r
     JOIN usuarios u ON u.id = r.usuario_id
@@ -164,4 +164,4 @@ WHERE
 GROUP BY
     u.id
 ORDER BY
-    reseñas_negativas DESC;
+    resegnas_negativas DESC;
