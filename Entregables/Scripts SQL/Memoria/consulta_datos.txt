@@ -1,0 +1,35 @@
+---------------------------------------------Establecimientos abiertos hasta cierta hora---------------------------------------------
+
+# 1. Establecimientos abiertos hasta las 20:00 o más tarde
+ZRANGEBYSCORE establecimientos:por_hora_cierre 1200 +inf
+
+# 28. Contar cuántos establecimientos cierran exactamente a las 23:00
+ZCOUNT establecimientos:por_hora_cierre 1380 1380
+
+---------------------------------------------Promociones activas---------------------------------------------
+
+# 1. Todas las promociones activas a partir del 1 de abril de 2024
+ZRANGEBYSCORE promociones:activas 1712073600 +inf
+
+# 8. Las 5 promociones que expiran más pronto
+ZRANGE promociones:activas 0 4
+
+# 15. Promociones que expiran en julio de 2024
+ZRANGEBYSCORE promociones:activas 1719878400 1722556800
+
+---------------------------------------------Rankings de establecimientos más visitados---------------------------------------------
+
+# 1. Top 5 establecimientos más visitados
+ZREVRANGE establecimientos:por_visitas 0 4 WITHSCORES
+
+# 3. Todos los establecimientos ordenados por número de visitas (descendente)
+ZREVRANGE establecimientos:por_visitas 0 -1 WITHSCORES
+
+
+---------------------------------------------Platillos más consumidos por establecimiento---------------------------------------------
+
+# 1. Top 3 platillos más consumidos del establecimiento 1
+ZREVRANGE establecimiento:1:platillos_por_consumo 0 2 WITHSCORES
+
+# 3. Top 5 platillos más consumidos del establecimiento 12
+ZREVRANGE establecimiento:12:platillos_por_consumo 0 4 WITHSCORES

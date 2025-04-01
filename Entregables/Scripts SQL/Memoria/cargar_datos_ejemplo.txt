@@ -1,0 +1,140 @@
+---------------------------------------------Establecimientos abiertos hasta cierta hora---------------------------------------------
+
+# Cargar datos de horarios de cierre (en minutos desde medianoche)
+ZADD establecimientos:por_hora_cierre 1410 "1"  # Burger Town - 23:30
+ZADD establecimientos:por_hora_cierre 1380 "2"  # Burgers & Fries - 23:00
+ZADD establecimientos:por_hora_cierre 1200 "3"  # Café Aroma - 20:00
+ZADD establecimientos:por_hora_cierre 1200 "4"  # Café de la Plaza - 20:00
+ZADD establecimientos:por_hora_cierre 1080 "5"  # Café de Olla - 18:00
+ZADD establecimientos:por_hora_cierre 1380 "6"  # Churrasquería Pampas - 23:00
+ZADD establecimientos:por_hora_cierre 1140 "7"  # Comida Vegana - 19:00
+ZADD establecimientos:por_hora_cierre 1140 "8"  # Donuts Heaven - 19:00
+ZADD establecimientos:por_hora_cierre 900 "9"   # El Antojo Mexicano - 15:00
+ZADD establecimientos:por_hora_cierre 1380 "10" # El Asador - 23:00
+ZADD establecimientos:por_hora_cierre 1260 "11" # El Barrio de los Tacos - 21:00
+ZADD establecimientos:por_hora_cierre 120 "12"  # El Buen Taco - 02:00 (del día siguiente)
+ZADD establecimientos:por_hora_cierre 1200 "13" # El Fogón de la Abuela - 20:00
+ZADD establecimientos:por_hora_cierre 1350 "14" # El Fogón - 22:30
+ZADD establecimientos:por_hora_cierre 1380 "15" # El Rincón Mexicano - 23:00
+ZADD establecimientos:por_hora_cierre 1140 "16" # Empanadas Argentinas - 19:00
+ZADD establecimientos:por_hora_cierre 960 "17"  # Fonda Doña Lucha - 16:00
+ZADD establecimientos:por_hora_cierre 1439 "18" # Food Truck 24/7 - 23:59:59
+ZADD establecimientos:por_hora_cierre 1260 "19" # Heladería Dolce Vita - 21:00
+ZADD establecimientos:por_hora_cierre 1290 "20" # La Casa del Ramen - 21:30
+
+# Almacenar detalles de establecimientos
+HSET establecimiento:1 nombre "Burger Town" categoria "Hamburguesería" hora_apertura "11:00" hora_cierre "23:30"
+HSET establecimiento:2 nombre "Burgers & Fries" categoria "Comida Rápida" hora_apertura "11:00" hora_cierre "23:00"
+HSET establecimiento:3 nombre "Café Aroma" categoria "Cafetería" hora_apertura "08:00" hora_cierre "20:00"
+HSET establecimiento:12 nombre "El Buen Taco" categoria "Comida callejera" hora_apertura "18:00" hora_cierre "02:00"
+HSET establecimiento:18 nombre "Food Truck 24/7" categoria "Comida Rápida" hora_apertura "00:00" hora_cierre "23:59:59"
+
+
+---------------------------------------------Promociones activas---------------------------------------------
+
+# Cargar datos de promociones con sus fechas de expiración (timestamps Unix)
+# Nota: Usamos 1712073600 como fecha actual (1 de abril de 2024)
+
+ZADD promociones:activas 1719792000 "1"    # 2x1 en tacos al pastor los martes (30/06/2024)
+ZADD promociones:activas 1719878400 "2"    # Café gratis en la compra de 2 piezas de pan (01/07/2024)
+ZADD promociones:activas 1722297600 "3"    # 50% de descuento en ceviches los jueves (10/09/2024)
+ZADD promociones:activas 1720483200 "4"    # Combo de hamburguesa con papas gratis (08/07/2024)
+ZADD promociones:activas 1722556800 "5"    # Ceviche XL con descuento del 20% (25/07/2024)
+ZADD promociones:activas 1722124800 "6"    # Sushi roll gratis por cada compra mayor a $20 (10/06/2024)
+ZADD promociones:activas 1722470400 "7"    # Ramen con doble porción de fideos gratis (15/08/2024)
+ZADD promociones:activas 1722384000 "8"    # Pizza grande con 50% de descuento los miércoles (15/07/2024)
+ZADD promociones:activas 1722211200 "9"    # Pizza mediana gratis en la compra de 2 grandes (15/06/2024)
+ZADD promociones:activas 1722038400 "10"   # Plato de mariscos con 10% de descuento (05/07/2024)
+ZADD promociones:activas 1722124800 "11"   # Empanada extra gratis en compras de 3 o más (05/08/2024)
+ZADD promociones:activas 1723248000 "12"   # Hot dogs gourmet al 2x1 los viernes (10/10/2024)
+ZADD promociones:activas 1722988800 "13"   # Orden de gorditas con agua fresca gratis (01/09/2024)
+ZADD promociones:activas 1722124800 "14"   # Orden de pupusas gratis en compras mayores a $15 (10/07/2024)
+ZADD promociones:activas 1722729600 "15"   # Parrillada familiar con bebida incluida (20/09/2024)
+
+# Almacenar detalles de promociones
+HSET promocion:1 oferta "2x1 en tacos al pastor los martes" fecha_inicio "2024-03-01" fecha_expiracion "2024-06-30" establecimiento_id "1"
+HSET promocion:2 oferta "Café gratis en la compra de 2 piezas de pan" fecha_inicio "2024-02-01" fecha_expiracion "2024-07-01" establecimiento_id "6"
+HSET promocion:3 oferta "50% de descuento en ceviches los jueves" fecha_inicio "2024-04-10" fecha_expiracion "2024-09-10" establecimiento_id "7"
+HSET promocion:12 oferta "Hot dogs gourmet al 2x1 los viernes" fecha_inicio "2024-05-10" fecha_expiracion "2024-10-10" establecimiento_id "18"
+
+# Almacenar promociones por establecimiento
+SADD establecimiento:1:promociones "1"
+SADD establecimiento:6:promociones "2"
+SADD establecimiento:7:promociones "3"
+SADD establecimiento:18:promociones "12"
+
+
+---------------------------------------------Rankings de establecimientos más visitados---------------------------------------------
+
+
+
+# Cargar datos de visitas por establecimiento
+ZADD establecimientos:por_visitas 42 "1"   # Burger Town
+ZADD establecimientos:por_visitas 38 "2"   # Burgers & Fries
+ZADD establecimientos:por_visitas 25 "3"   # Café Aroma
+ZADD establecimientos:por_visitas 18 "4"   # Café de la Plaza
+ZADD establecimientos:por_visitas 15 "5"   # Café de Olla
+ZADD establecimientos:por_visitas 30 "6"   # Churrasquería Pampas
+ZADD establecimientos:por_visitas 22 "7"   # Comida Vegana
+ZADD establecimientos:por_visitas 19 "8"   # Donuts Heaven
+ZADD establecimientos:por_visitas 12 "9"   # El Antojo Mexicano
+ZADD establecimientos:por_visitas 28 "10"  # El Asador
+ZADD establecimientos:por_visitas 35 "11"  # El Barrio de los Tacos
+ZADD establecimientos:por_visitas 50 "12"  # El Buen Taco
+ZADD establecimientos:por_visitas 17 "13"  # El Fogón de la Abuela
+ZADD establecimientos:por_visitas 23 "14"  # El Fogón
+ZADD establecimientos:por_visitas 31 "15"  # El Rincón Mexicano
+
+# Cargar datos de visitas por mes para algunos establecimientos
+ZADD establecimientos:por_visitas:202403 15 "1"  # Marzo 2024
+ZADD establecimientos:por_visitas:202403 12 "2"
+ZADD establecimientos:por_visitas:202403 8 "3"
+ZADD establecimientos:por_visitas:202404 18 "1"  # Abril 2024
+ZADD establecimientos:por_visitas:202404 14 "2"
+ZADD establecimientos:por_visitas:202404 10 "3"
+ZADD establecimientos:por_visitas:202405 9 "1"   # Mayo 2024 (parcial)
+ZADD establecimientos:por_visitas:202405 12 "2"
+ZADD establecimientos:por_visitas:202405 7 "3"
+
+# Almacenar detalles de establecimientos
+HSET establecimiento:1 nombre "Burger Town" categoria "Hamburguesería" rating "4.5"
+HSET establecimiento:2 nombre "Burgers & Fries" categoria "Comida Rápida" rating "4.4"
+HSET establecimiento:12 nombre "El Buen Taco" categoria "Comida callejera" rating "4.7"
+
+
+---------------------------------------------Platillos más consumidos por establecimiento---------------------------------------------
+
+
+
+# Cargar datos de consumo de platillos para el establecimiento 1 (Burger Town)
+ZADD establecimiento:1:platillos_por_consumo 45 "1"   # Hamburguesa Clásica
+ZADD establecimiento:1:platillos_por_consumo 38 "2"   # Hamburguesa con Queso
+ZADD establecimiento:1:platillos_por_consumo 32 "3"   # Hamburguesa Doble
+ZADD establecimiento:1:platillos_por_consumo 25 "4"   # Hamburguesa Vegetariana
+ZADD establecimiento:1:platillos_por_consumo 20 "5"   # Papas Fritas
+ZADD establecimiento:1:platillos_por_consumo 18 "6"   # Aros de Cebolla
+ZADD establecimiento:1:platillos_por_consumo 15 "7"   # Ensalada César
+ZADD establecimiento:1:platillos_por_consumo 12 "8"   # Nuggets de Pollo
+
+# Cargar datos de consumo de platillos para el establecimiento 2 (Burgers & Fries)
+ZADD establecimiento:2:platillos_por_consumo 50 "9"   # Hamburguesa Especial
+ZADD establecimiento:2:platillos_por_consumo 42 "10"  # Papas Fritas Grandes
+ZADD establecimiento:2:platillos_por_consumo 35 "11"  # Hamburguesa BBQ
+ZADD establecimiento:2:platillos_por_consumo 28 "12"  # Hamburguesa de Pollo
+ZADD establecimiento:2:platillos_por_consumo 22 "13"  # Batido de Chocolate
+ZADD establecimiento:2:platillos_por_consumo 18 "14"  # Helado de Vainilla
+
+# Cargar datos de consumo de platillos para el establecimiento 12 (El Buen Taco)
+ZADD establecimiento:12:platillos_por_consumo 60 "15"  # Tacos al Pastor
+ZADD establecimiento:12:platillos_por_consumo 48 "16"  # Tacos de Carnitas
+ZADD establecimiento:12:platillos_por_consumo 40 "17"  # Tacos de Bistec
+ZADD establecimiento:12:platillos_por_consumo 35 "18"  # Quesadillas
+ZADD establecimiento:12:platillos_por_consumo 30 "19"  # Gringas
+ZADD establecimiento:12:platillos_por_consumo 25 "20"  # Sopes
+ZADD establecimiento:12:platillos_por_consumo 20 "21"  # Agua de Horchata
+ZADD establecimiento:12:platillos_por_consumo 15 "22"  # Agua de Jamaica
+
+# Almacenar detalles de platillos
+HSET platillo:1 nombre "Hamburguesa Clásica" precio "8.99" descripcion "Hamburguesa con carne, lechuga, tomate y cebolla"
+HSET platillo:15 nombre "Tacos al Pastor" precio "1.50" descripcion "Tacos de cerdo marinado con piña y cilantro"
+HSET platillo:9 nombre "Hamburguesa Especial" precio "10.99" descripcion "Hamburguesa con queso, tocino y salsa especial"
