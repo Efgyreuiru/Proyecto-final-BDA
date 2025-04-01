@@ -1,4 +1,3 @@
--- Insertar datos de usuarios
 INSERT INTO usuarios (nombre, email, telefono, fecha_registro, ubicacion) VALUES
 ('Ana García', 'ana.garcia@example.com', '555-0102', '2025-04-02', ST_GeomFromText('POINT(-0.127758 51.507351)', 4326)),  
 ('Ana González', 'ana.gonzalez@example.com', '555-4321', '2024-04-20', ST_GeomFromText('POINT(-3.7038 40.4168)', 4326)),
@@ -19,7 +18,7 @@ INSERT INTO usuarios (nombre, email, telefono, fecha_registro, ubicacion) VALUES
 ('Gabriela Jiménez', 'gabriela.jimenez@example.com', '555-4455', '2024-04-25', ST_GeomFromText('POINT(37.6173 55.7558)', 4326)),
 ('Guillermo Chávez', 'guillermo.chavez@example.com', '555-1717', '2024-02-17', ST_GeomFromText('POINT(-157.8583 21.3069)', 4326)),
 ('Gustavo León', 'gustavo.leon@example.com', '555-2121', '2024-06-11', ST_GeomFromText('POINT(50.1109 8.6821)', 4326)),
-('Héctor Peña', 'hector.pena@example.com', '555-2323', '2024-08-18', ST_GeomFromText('POINT(-43.1729 -22.9068)', 4326))
+('Héctor Peña', 'hector.pena@example.com', '555-2323', '2024-08-18', ST_GeomFromText('POINT(-43.1729 -22.9068)', 4326)),
 ('Javier Herrera', 'javier.herrera@example.com', '555-6543', '2024-07-15', ST_GeomFromText('POINT(151.2093 -33.8688)', 4326)),
 ('José Sánchez', 'jose.sanchez@example.com', '555-0107', '2025-04-01', ST_GeomFromText('POINT(12.496366 41.902783)', 4326)),
 ('Juan López', 'juan.lopez@example.com', '555-0103', '2025-03-28', ST_GeomFromText('POINT(-58.443830 -34.603684)', 4326)),
@@ -44,9 +43,10 @@ INSERT INTO usuarios (nombre, email, telefono, fecha_registro, ubicacion) VALUES
 ('Roberto Navarro', 'roberto.navarro@example.com', '555-1313', '2024-10-28', ST_GeomFromText('POINT(-71.0589 42.3601)', 4326)),
 ('Sofía Castillo', 'sofia.castillo@example.com', '555-7890', '2024-08-25', ST_GeomFromText('POINT(139.6917 35.6895)', 4326)),
 ('Sofía Fernández', 'sofia.fernandez@example.com', '555-0108', '2025-03-30', ST_GeomFromText('POINT(-74.010020 40.710800)', 4326)),
-('Valeria Castro', 'valeria.castro@example.com', '555-8899', '2024-07-09', ST_GeomFromText('POINT(72.8777 19.0760)', 4326)),
+('Valeria Castro', 'valeria.castro@example.com', '555-8899', '2024-07-09', ST_GeomFromText('POINT(72.8777 19.0760)', 4326));
 
--- Insertar datos de establecimientos
+
+
 INSERT INTO establecimientos (nombre, descripcion, hora_apertura, hora_cierre, dias_laborales, telefono, categoria, rating, fecha_inauguracion, ubicacion) VALUES
 ('Burger Town', 'Hamburguesas estilo americano con carne premium.', '11:00', '23:30', 'Lunes a Sábado', '555-8765', 'Hamburguesería', 4.5, '2020-03-20', ST_GeomFromText('POINT(-74.0060 40.7128)', 4326)),
 ('Burgers & Fries', 'Comida rápida, hamburguesas gourmet y papas fritas estilo americano.', '11:00:00', '23:00:00', 'Lunes a Sábado', '555-9876', 'Comida Rápida', 4.4, '2019-02-14', ST_GeomFromText('POINT(-99.133208 19.432608)', 4326)),  
@@ -87,7 +87,8 @@ INSERT INTO establecimientos (nombre, descripcion, hora_apertura, hora_cierre, d
 ('Taco Truck Express', 'Comida rápida callejera, tacos al pastor y carnitas.', '10:00:00', '20:00:00', 'Lunes a Sábado', '555-8765', 'Comida Callejera', 4.3, '2019-03-01', ST_GeomFromText('POINT(-74.006015 40.712776)', 4326)),  
 ('Tacos El Rey', 'Los mejores tacos al pastor de la ciudad.', '19:00', '03:00', 'Miércoles a Domingo', '555-7890', 'Comida callejera', 4.8, '2013-09-30', ST_GeomFromText('POINT(139.6917 35.6895)', 4326));
 
--- Insertar datos de empleados
+
+
 INSERT INTO empleados (nombre, puesto, fecha_contratacion, establecimiento_id) VALUES
 ('Adriana Sepúlveda', 'Mesero', '2020-07-12', 16),
 ('Alberto Pérez', 'Vendedor', '2021-02-12', 22),
@@ -204,7 +205,8 @@ INSERT INTO empleados (nombre, puesto, fecha_contratacion, establecimiento_id) V
 ('Víctor Fernández', 'Supervisor', '2022-12-25', 24),
 ('Óscar Martínez', 'Gerente', '2023-02-08', 19);
 
--- Insertar datos de promociones
+
+
 INSERT INTO promociones (oferta, fecha_inicio, fecha_expiracion, establecimiento_id) VALUES
 ('2 cervezas artesanales al precio de 1', '2024-05-05', '2024-09-05', 12),
 ('2x1 en cosméticos seleccionados', '2025-03-01', '2025-03-15', 15),
@@ -267,7 +269,9 @@ INSERT INTO promociones (oferta, fecha_inicio, fecha_expiracion, establecimiento
 ('Sushi roll gratis por cada compra mayor a $20', '2024-01-10', '2024-06-10', 4),
 ('Tacos al 3x2 los fines de semana', '2024-05-01', '2024-10-01', 8);
 
-INSERT INTO comidas (nombre, tipo_cocina)
+
+
+INSERT INTO comidas (nombre, tipo_cocina) VALUES
 ('Arepas de Carne Mechada', 'Venezolana'),
 ('Arepas', 'Venezolana'),
 ('Arroz con Pollo', 'Latina'),
@@ -349,6 +353,8 @@ INSERT INTO comidas (nombre, tipo_cocina)
 ('Tiramisú', 'Italiana'),
 ('Tortilla de Patatas', 'Española'),
 ('Tortilla Española', 'Española');
+
+
 
 
 INSERT INTO platillos (nombre, descripcion, precio, esta_disponible, comida_id, establecimiento_id) VALUES
@@ -434,6 +440,8 @@ INSERT INTO platillos (nombre, descripcion, precio, esta_disponible, comida_id, 
 ('Tortilla de Patatas', 'Tortilla española a base de patatas, cebolla y huevos.', 9.00, TRUE, 1, 19),
 ('Tortilla Española', 'Tortilla de patatas con cebolla, muy popular en España.', 9.99, TRUE, 1, 24);
 
+
+
 INSERT INTO preferencias (usuario_id, comida_id, nivel_preferencia) VALUES
 (1, 1, 5),
 (1, 2, 3),
@@ -445,7 +453,6 @@ INSERT INTO preferencias (usuario_id, comida_id, nivel_preferencia) VALUES
 (2, 5, 5),
 (2, 8, 6),
 (2, 15, 4),
-(3, 6, 1),
 (3, 6, 3),
 (3, 7, 3),
 (3, 12, 10),
@@ -513,6 +520,8 @@ INSERT INTO preferencias (usuario_id, comida_id, nivel_preferencia) VALUES
 (25, 49, 5),
 (25, 50, 3);
 
+
+
 INSERT INTO reviews (calificacion, comentario, fecha_publicacion, usuario_id, establecimiento_id) VALUES
 (1, 'El hot dog estaba frío y el pan muy seco.', '2024-03-05 11:45:00', 10, 18),
 (1, 'El mole poblano tenía un sabor amargo, no me gustó.', '2024-03-22 12:30:00', 8, 1),
@@ -555,6 +564,8 @@ INSERT INTO reviews (calificacion, comentario, fecha_publicacion, usuario_id, es
 (5, '¡Excelente! Comida deliciosa y el lugar es muy bonito.', '2025-04-02 11:30:00', 17, 3),
 (5, '¡La mejor comida mexicana que he probado! Los tacos al pastor son increíbles.', '2024-03-01 18:30:00', 1, 1);
 
+
+
 INSERT INTO visitas (fecha_visita, consumo_total, usuario_id, establecimiento_id) VALUES
 ('2024-01-05 13:45:00', 16.90, 3, 7),
 ('2024-01-15 11:45:00', 35.60, 7, 11),
@@ -595,7 +606,7 @@ INSERT INTO visitas (fecha_visita, consumo_total, usuario_id, establecimiento_id
 ('2025-04-02 12:00:00', 37.60, 17, 3),
 ('2025-04-02 13:15:00', 52.40, 18, 1),
 ('2025-04-02 14:00:00', 60.00, 19, 2),
-('2025-04-02 15:00:00', 34.80, 20, 3),
+('2025-04-02 15:00:00', 34.80, 20, 3);
 
 INSERT INTO detalle_visitas (cantidad, precio_unitario, visita_id, platillo_id) VALUES
 (1, 5.99, 14, 14),

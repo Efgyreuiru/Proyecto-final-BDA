@@ -1,8 +1,9 @@
 CREATE DATABASE "ProyectoFinalDb";
 
-\ c "ProyectoFinalDb";
+\c "ProyectoFinalDb"
 
 CREATE EXTENSION IF NOT EXISTS postgis;
+
 
 CREATE TABLE usuarios (
     id SERIAL PRIMARY KEY,
@@ -107,7 +108,7 @@ CREATE TABLE detalle_visitas (
 --
 CREATE INDEX idx_reviews_calificacion ON reviews (calificacion);
 
-CREATE INDEX idx_reviews_fecha ON reviews (fecha_review);
+CREATE INDEX idx_reviews_fecha ON reviews (fecha_publicacion);
 
 CREATE INDEX idx_visitas_fecha ON visitas (fecha_visita);
 
