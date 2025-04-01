@@ -1,0 +1,8 @@
+{
+  "establecimiento_id": 1,
+  "mes": "2025-03",
+  "platillos": [
+    { "platillo_id": 1, "nombre": "Ensalada César", "cantidad": 150 },
+    { "platillo_id": 2, "nombre": "Pizza Margarita", "cantidad": 200 }
+  ]
+}

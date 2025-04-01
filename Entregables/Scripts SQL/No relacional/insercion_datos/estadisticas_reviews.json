@@ -1,0 +1,15 @@
+[
+  {
+    "establecimiento_id": 1,
+    "mes": "2025-03",
+    "total_reviews": 58,
+    "promedio_calificacion": 4.2,
+    "distribucion_calificaciones": {
+      "1": 2,
+      "2": 4,
+      "3": 10,
+      "4": 20,
+      "5": 22
+    }
+  }
+]

@@ -1,0 +1,11 @@
+use ProyectoFinalDb;
+
+// Crear las colecciones
+db.createCollection("reportes_establecimientos");
+db.createCollection("estadisticas_reviews");
+db.createCollection("platillos_estrellas");
+
+// Crear índices
+db.reportes_establecimientos.createIndex({ establecimiento_id: 1, fecha: 1 });
+db.estadisticas_reviews.createIndex({ establecimiento_id: 1, mes: 1 });
+db.platillos_estrellas.createIndex({ establecimiento_id: 1, mes: 1 });

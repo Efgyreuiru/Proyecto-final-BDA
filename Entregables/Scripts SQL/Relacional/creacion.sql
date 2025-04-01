@@ -1,6 +1,6 @@
-CREATE DATABASE "EstablecimientosDb";
+CREATE DATABASE "ProyectoFinalDb";
 
-\ c "EstablecimientosDb";
+\ c "ProyectoFinalDb";
 
 CREATE EXTENSION IF NOT EXISTS postgis;
 
@@ -32,6 +32,15 @@ CREATE TABLE empleados (
     nombre VARCHAR(100) NOT NULL,
     puesto VARCHAR(50) NOT NULL,
     fecha_contratacion DATE NOT NULL,
+    establecimiento_id INT NOT NULL,
+    CONSTRAINT fk_empleados_establecimiento FOREIGN KEY (establecimiento_id) REFERENCES establecimientos(id)
+);
+
+CREATE TABLE promociones (
+    id SERIAL PRIMARY KEY,
+    oferta TEXT NOT NULL,
+    fecha_inicio DATE NOT NULL,
+    fecha_expiracion DATE NOT NULL,
     establecimiento_id INT NOT NULL,
     CONSTRAINT fk_empleados_establecimiento FOREIGN KEY (establecimiento_id) REFERENCES establecimientos(id)
 );
@@ -94,17 +103,16 @@ CREATE TABLE detalle_visitas (
     CONSTRAINT fk_detalle_visitas_platillo FOREIGN KEY (platillo_id) REFERENCES platillos(id)
 );
 
--- Índices espaciales para acelerar consultas de distancia, proximidad, etc.
+-- Índices para acelerar consultas
+--
+CREATE INDEX idx_reviews_calificacion ON reviews (calificacion);
+
+CREATE INDEX idx_reviews_fecha ON reviews (fecha_review);
+
+CREATE INDEX idx_visitas_fecha ON visitas (fecha_visita);
+
+-- Índices espaciales
 --
 CREATE INDEX idx_usuarios_ubicacion ON usuarios USING GIST (ubicacion);
 
 CREATE INDEX idx_establecimientos_ubicacion ON establecimientos USING GIST (ubicacion);
-
--- Índice para acelerar búsqueda por calificación
-CREATE INDEX idx_reviews_calificacion ON reviews (calificacion);
-
--- Índice para ordenar por fecha_publicacion
-CREATE INDEX idx_reviews_fecha ON reviews (fecha_review);
-
--- Índice en visitas para búsqueda por fecha
-CREATE INDEX idx_visitas_fecha ON visitas (fecha_visita);
