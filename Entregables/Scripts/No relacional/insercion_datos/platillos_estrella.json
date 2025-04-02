@@ -1,8 +1,150 @@
-{
-  "establecimiento_id": 1,
-  "mes": "2025-03",
-  "platillos": [
-    { "platillo_id": 1, "nombre": "Ensalada César", "cantidad": 150 },
-    { "platillo_id": 2, "nombre": "Pizza Margarita", "cantidad": 200 }
-  ]
-}
+[
+  {
+    "establecimiento_id": 1,
+    "mes": "2024-02",
+    "platillos": [
+      { "platillo_id": 3, "nombre": "Arroz con Pollo", "cantidad": 1 },
+      {
+        "platillo_id": 7,
+        "nombre": "Bocadillo de Jamón Ibérico",
+        "cantidad": 1
+      }
+    ]
+  },
+  {
+    "establecimiento_id": 1,
+    "mes": "2024-03",
+    "platillos": [
+      { "platillo_id": 20, "nombre": "Curry de Pollo", "cantidad": 3 },
+      { "platillo_id": 16, "nombre": "Churrasco Argentino", "cantidad": 2 },
+      { "platillo_id": 30, "nombre": "Gyozas de Cerdo", "cantidad": 2 },
+      { "platillo_id": 10, "nombre": "Burrito Gigante", "cantidad": 1 }
+    ]
+  },
+  {
+    "establecimiento_id": 2,
+    "mes": "2024-02",
+    "platillos": [
+      {
+        "platillo_id": 7,
+        "nombre": "Bocadillo de Jamón Ibérico",
+        "cantidad": 2
+      },
+      { "platillo_id": 4, "nombre": "Baklava", "cantidad": 2 },
+      { "platillo_id": 10, "nombre": "Burrito Gigante", "cantidad": 2 },
+      { "platillo_id": 6, "nombre": "Biryani", "cantidad": 1 }
+    ]
+  },
+  {
+    "establecimiento_id": 3,
+    "mes": "2024-04",
+    "platillos": [
+      { "platillo_id": 23, "nombre": "Enchiladas Verdes", "cantidad": 4 },
+      { "platillo_id": 18, "nombre": "Cozido à Portuguesa", "cantidad": 1 }
+    ]
+  },
+  {
+    "establecimiento_id": 4,
+    "mes": "2024-02",
+    "platillos": [
+      { "platillo_id": 6, "nombre": "Biryani", "cantidad": 3 },
+      { "platillo_id": 14, "nombre": "Chiles en Nogada", "cantidad": 2 },
+      { "platillo_id": 5, "nombre": "Bibimbap", "cantidad": 1 },
+      { "platillo_id": 12, "nombre": "Ceviche Mixto", "cantidad": 1 }
+    ]
+  },
+  {
+    "establecimiento_id": 5,
+    "mes": "2024-02",
+    "platillos": [
+      { "platillo_id": 15, "nombre": "Chili con Carne", "cantidad": 4 },
+      { "platillo_id": 8, "nombre": "Bruschetta", "cantidad": 1 }
+    ]
+  },
+  {
+    "establecimiento_id": 5,
+    "mes": "2024-04",
+    "platillos": [
+      { "platillo_id": 28, "nombre": "Fideuá Valenciana", "cantidad": 2 },
+      { "platillo_id": 20, "nombre": "Curry de Pollo", "cantidad": 1 }
+    ]
+  },
+  {
+    "establecimiento_id": 7,
+    "mes": "2024-01",
+    "platillos": [
+      { "platillo_id": 1, "nombre": "Arepas Rellenas", "cantidad": 2 },
+      { "platillo_id": 3, "nombre": "Arroz con Pollo", "cantidad": 2 },
+      { "platillo_id": 5, "nombre": "Bibimbap", "cantidad": 1 }
+    ]
+  },
+  {
+    "establecimiento_id": 8,
+    "mes": "2024-03",
+    "platillos": [
+      { "platillo_id": 29, "nombre": "Goulash", "cantidad": 3 },
+      { "platillo_id": 14, "nombre": "Chiles en Nogada", "cantidad": 1 }
+    ]
+  },
+  {
+    "establecimiento_id": 9,
+    "mes": "2024-02",
+    "platillos": [
+      { "platillo_id": 9, "nombre": "Bulgur Pilavi", "cantidad": 2 },
+      { "platillo_id": 18, "nombre": "Cozido à Portuguesa", "cantidad": 1 }
+    ]
+  },
+  {
+    "establecimiento_id": 9,
+    "mes": "2024-03",
+    "platillos": [
+      { "platillo_id": 25, "nombre": "Falafel Clásico", "cantidad": 1 },
+      { "platillo_id": 12, "nombre": "Ceviche Mixto", "cantidad": 1 }
+    ]
+  },
+  {
+    "establecimiento_id": 11,
+    "mes": "2024-01",
+    "platillos": [{ "platillo_id": 2, "nombre": "Arepas", "cantidad": 4 }]
+  },
+  {
+    "establecimiento_id": 14,
+    "mes": "2024-03",
+    "platillos": [
+      { "platillo_id": 6, "nombre": "Biryani", "cantidad": 1 },
+      { "platillo_id": 17, "nombre": "Churrasco", "cantidad": 1 }
+    ]
+  },
+  {
+    "establecimiento_id": 15,
+    "mes": "2024-03",
+    "platillos": [
+      { "platillo_id": 12, "nombre": "Ceviche Mixto", "cantidad": 1 },
+      { "platillo_id": 15, "nombre": "Chili con Carne", "cantidad": 1 }
+    ]
+  },
+  {
+    "establecimiento_id": 17,
+    "mes": "2024-04",
+    "platillos": [
+      { "platillo_id": 4, "nombre": "Baklava", "cantidad": 3 },
+      { "platillo_id": 19, "nombre": "Croissant", "cantidad": 2 }
+    ]
+  },
+  {
+    "establecimiento_id": 18,
+    "mes": "2024-03",
+    "platillos": [
+      { "platillo_id": 8, "nombre": "Bruschetta", "cantidad": 2 },
+      { "platillo_id": 11, "nombre": "Cachapa con Queso", "cantidad": 2 }
+    ]
+  },
+  {
+    "establecimiento_id": 20,
+    "mes": "2024-03",
+    "platillos": [
+      { "platillo_id": 27, "nombre": "Fettuccine Alfredo", "cantidad": 2 },
+      { "platillo_id": 13, "nombre": "Ceviche", "cantidad": 2 }
+    ]
+  }
+]

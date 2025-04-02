@@ -1,8 +1,142 @@
 [
   {
     "establecimiento_id": 1,
-    "fecha": "2025-04-01",
-    "visitas_totales": 54,
-    "promedio_calificacion": 4.3
+    "mes": "2024-02",
+    "visitas_totales": 1,
+    "Consumo total": 21.99,
+    "promedio_consumo": 21.99
+  },
+  {
+    "establecimiento_id": 1,
+    "mes": "2024-03",
+    "visitas_totales": 2,
+    "Consumo total": 45.0,
+    "promedio_consumo": 22.5
+  },
+  {
+    "establecimiento_id": 1,
+    "mes": "2025-04",
+    "visitas_totales": 6,
+    "Consumo total": 286.5,
+    "promedio_consumo": 47.75
+  },
+  {
+    "establecimiento_id": 2,
+    "mes": "2024-02",
+    "visitas_totales": 2,
+    "Consumo total": 41.98,
+    "promedio_consumo": 20.99
+  },
+  {
+    "establecimiento_id": 2,
+    "mes": "2025-04",
+    "visitas_totales": 7,
+    "Consumo total": 246.5,
+    "promedio_consumo": 35.21
+  },
+  {
+    "establecimiento_id": 3,
+    "mes": "2024-04",
+    "visitas_totales": 1,
+    "Consumo total": 28.5,
+    "promedio_consumo": 28.5
+  },
+  {
+    "establecimiento_id": 3,
+    "mes": "2025-04",
+    "visitas_totales": 7,
+    "Consumo total": 281.3,
+    "promedio_consumo": 40.19
+  },
+  {
+    "establecimiento_id": 4,
+    "mes": "2024-02",
+    "visitas_totales": 2,
+    "Consumo total": 51.74,
+    "promedio_consumo": 25.87
+  },
+  {
+    "establecimiento_id": 5,
+    "mes": "2024-02",
+    "visitas_totales": 1,
+    "Consumo total": 40.0,
+    "promedio_consumo": 40.0
+  },
+  {
+    "establecimiento_id": 5,
+    "mes": "2024-04",
+    "visitas_totales": 1,
+    "Consumo total": 42.0,
+    "promedio_consumo": 42.0
+  },
+  {
+    "establecimiento_id": 7,
+    "mes": "2024-01",
+    "visitas_totales": 1,
+    "Consumo total": 16.9,
+    "promedio_consumo": 16.9
+  },
+  {
+    "establecimiento_id": 8,
+    "mes": "2024-03",
+    "visitas_totales": 1,
+    "Consumo total": 27.8,
+    "promedio_consumo": 27.8
+  },
+  {
+    "establecimiento_id": 9,
+    "mes": "2024-02",
+    "visitas_totales": 1,
+    "Consumo total": 24.5,
+    "promedio_consumo": 24.5
+  },
+  {
+    "establecimiento_id": 9,
+    "mes": "2024-03",
+    "visitas_totales": 1,
+    "Consumo total": 15.0,
+    "promedio_consumo": 15.0
+  },
+  {
+    "establecimiento_id": 11,
+    "mes": "2024-01",
+    "visitas_totales": 1,
+    "Consumo total": 35.6,
+    "promedio_consumo": 35.6
+  },
+  {
+    "establecimiento_id": 14,
+    "mes": "2024-03",
+    "visitas_totales": 1,
+    "Consumo total": 22.3,
+    "promedio_consumo": 22.3
+  },
+  {
+    "establecimiento_id": 15,
+    "mes": "2024-03",
+    "visitas_totales": 1,
+    "Consumo total": 38.25,
+    "promedio_consumo": 38.25
+  },
+  {
+    "establecimiento_id": 17,
+    "mes": "2024-04",
+    "visitas_totales": 1,
+    "Consumo total": 29.99,
+    "promedio_consumo": 29.99
+  },
+  {
+    "establecimiento_id": 18,
+    "mes": "2024-03",
+    "visitas_totales": 1,
+    "Consumo total": 12.5,
+    "promedio_consumo": 12.5
+  },
+  {
+    "establecimiento_id": 20,
+    "mes": "2024-03",
+    "visitas_totales": 1,
+    "Consumo total": 33.75,
+    "promedio_consumo": 33.75
   }
 ]

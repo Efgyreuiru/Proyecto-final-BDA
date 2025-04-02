@@ -1,15 +1,262 @@
 [
   {
     "establecimiento_id": 1,
-    "mes": "2025-03",
-    "total_reviews": 58,
-    "promedio_calificacion": 4.2,
+    "mes": "2024-02",
+    "total_reviews": 1,
+    "promedio_calificacion": 3.0,
     "distribucion_calificaciones": {
-      "1": 2,
-      "2": 4,
-      "3": 10,
-      "4": 20,
-      "5": 22
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 0,
+      "5": 0
+    }
+  },
+  {
+    "establecimiento_id": 1,
+    "mes": "2024-03",
+    "total_reviews": 2,
+    "promedio_calificacion": 3.0,
+    "distribucion_calificaciones": {
+      "1": 1,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 1
+    }
+  },
+  {
+    "establecimiento_id": 1,
+    "mes": "2025-04",
+    "total_reviews": 6,
+    "promedio_calificacion": 3.67,
+    "distribucion_calificaciones": {
+      "1": 0,
+      "2": 0,
+      "3": 3,
+      "4": 2,
+      "5": 1
+    }
+  },
+  {
+    "establecimiento_id": 2,
+    "mes": "2024-02",
+    "total_reviews": 2,
+    "promedio_calificacion": 4.0,
+    "distribucion_calificaciones": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 0,
+      "5": 1
+    }
+  },
+  {
+    "establecimiento_id": 2,
+    "mes": "2025-04",
+    "total_reviews": 7,
+    "promedio_calificacion": 3.14,
+    "distribucion_calificaciones": {
+      "1": 1,
+      "2": 2,
+      "3": 1,
+      "4": 1,
+      "5": 2
+    }
+  },
+  {
+    "establecimiento_id": 3,
+    "mes": "2024-04",
+    "total_reviews": 1,
+    "promedio_calificacion": 5.0,
+    "distribucion_calificaciones": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 1
+    }
+  },
+  {
+    "establecimiento_id": 3,
+    "mes": "2025-04",
+    "total_reviews": 7,
+    "promedio_calificacion": 4.29,
+    "distribucion_calificaciones": {
+      "1": 0,
+      "2": 1,
+      "3": 0,
+      "4": 2,
+      "5": 4
+    }
+  },
+  {
+    "establecimiento_id": 4,
+    "mes": "2024-02",
+    "total_reviews": 2,
+    "promedio_calificacion": 4.5,
+    "distribucion_calificaciones": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 1,
+      "5": 1
+    }
+  },
+  {
+    "establecimiento_id": 5,
+    "mes": "2024-02",
+    "total_reviews": 1,
+    "promedio_calificacion": 5.0,
+    "distribucion_calificaciones": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 1
+    }
+  },
+  {
+    "establecimiento_id": 5,
+    "mes": "2024-04",
+    "total_reviews": 1,
+    "promedio_calificacion": 4.0,
+    "distribucion_calificaciones": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 1,
+      "5": 0
+    }
+  },
+  {
+    "establecimiento_id": 7,
+    "mes": "2024-01",
+    "total_reviews": 1,
+    "promedio_calificacion": 2.0,
+    "distribucion_calificaciones": {
+      "1": 0,
+      "2": 1,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    }
+  },
+  {
+    "establecimiento_id": 8,
+    "mes": "2024-03",
+    "total_reviews": 1,
+    "promedio_calificacion": 4.0,
+    "distribucion_calificaciones": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 1,
+      "5": 0
+    }
+  },
+  {
+    "establecimiento_id": 9,
+    "mes": "2024-02",
+    "total_reviews": 1,
+    "promedio_calificacion": 3.0,
+    "distribucion_calificaciones": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 0,
+      "5": 0
+    }
+  },
+  {
+    "establecimiento_id": 9,
+    "mes": "2024-03",
+    "total_reviews": 1,
+    "promedio_calificacion": 2.0,
+    "distribucion_calificaciones": {
+      "1": 0,
+      "2": 1,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    }
+  },
+  {
+    "establecimiento_id": 11,
+    "mes": "2024-01",
+    "total_reviews": 1,
+    "promedio_calificacion": 4.0,
+    "distribucion_calificaciones": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 1,
+      "5": 0
+    }
+  },
+  {
+    "establecimiento_id": 14,
+    "mes": "2024-03",
+    "total_reviews": 1,
+    "promedio_calificacion": 5.0,
+    "distribucion_calificaciones": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 1
+    }
+  },
+  {
+    "establecimiento_id": 15,
+    "mes": "2024-03",
+    "total_reviews": 1,
+    "promedio_calificacion": 5.0,
+    "distribucion_calificaciones": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 1
+    }
+  },
+  {
+    "establecimiento_id": 17,
+    "mes": "2024-04",
+    "total_reviews": 1,
+    "promedio_calificacion": 5.0,
+    "distribucion_calificaciones": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 1
+    }
+  },
+  {
+    "establecimiento_id": 18,
+    "mes": "2024-03",
+    "total_reviews": 1,
+    "promedio_calificacion": 1.0,
+    "distribucion_calificaciones": {
+      "1": 1,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    }
+  },
+  {
+    "establecimiento_id": 20,
+    "mes": "2024-03",
+    "total_reviews": 1,
+    "promedio_calificacion": 4.0,
+    "distribucion_calificaciones": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 1,
+      "5": 0
     }
   }
 ]
